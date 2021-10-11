@@ -9,7 +9,8 @@
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 </head>
 
-<main>
+<main id="homepage">
+	
 	<Canvas/>
 	{#if $togglePredicted}
 		<PredictedDigit/>
@@ -20,5 +21,13 @@
 </main>
 
 <style>
+#homepage{
+position: relative;
+width: 1440px;
+height: 1024px;
 
+background: #606060;
+mix-blend-mode: normal;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 </style>

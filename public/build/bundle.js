@@ -480,21 +480,18 @@ var app = (function () {
     	let p1;
     	let t5;
     	let p2;
-    	let t7;
+    	let t6;
     	let p3;
     	let t8;
-    	let p4;
-    	let t10;
     	let canvas_1;
-    	let t11;
+    	let t9;
     	let div2;
     	let div1;
     	let button0;
-    	let t13;
+    	let t11;
     	let button1;
-    	let t15;
+    	let t13;
     	let div0;
-    	let button2;
 
     	const block = {
     		c: function create() {
@@ -510,66 +507,55 @@ var app = (function () {
     			p1.textContent = "Prediction Result";
     			t5 = space();
     			p2 = element("p");
-    			p2.textContent = "X";
-    			t7 = space();
+    			t6 = space();
     			p3 = element("p");
+    			p3.textContent = "Accuracy: xx%";
     			t8 = space();
-    			p4 = element("p");
-    			p4.textContent = "Accuracy: xx%";
-    			t10 = space();
     			canvas_1 = element("canvas");
-    			t11 = space();
+    			t9 = space();
     			div2 = element("div");
     			div1 = element("div");
     			button0 = element("button");
     			button0.textContent = "clear";
-    			t13 = space();
+    			t11 = space();
     			button1 = element("button");
     			button1.textContent = "predict";
-    			t15 = space();
+    			t13 = space();
     			div0 = element("div");
-    			button2 = element("button");
-    			button2.textContent = "Graph";
     			attr_dev(h1, "id", "handWrite");
-    			attr_dev(h1, "class", "svelte-1oaigx8");
+    			attr_dev(h1, "class", "svelte-kqmr1e");
     			add_location(h1, file$3, 114, 0, 3526);
     			attr_dev(p0, "id", "writenum");
-    			attr_dev(p0, "class", "svelte-1oaigx8");
+    			attr_dev(p0, "class", "svelte-kqmr1e");
     			add_location(p0, file$3, 115, 0, 3588);
     			attr_dev(p1, "id", "predictionResult");
-    			attr_dev(p1, "class", "svelte-1oaigx8");
+    			attr_dev(p1, "class", "svelte-kqmr1e");
     			add_location(p1, file$3, 116, 0, 3628);
-    			attr_dev(p2, "id", "predictProduct");
-    			attr_dev(p2, "class", "svelte-1oaigx8");
+    			attr_dev(p2, "id", "arrowbody");
+    			attr_dev(p2, "class", "svelte-kqmr1e");
     			add_location(p2, file$3, 117, 0, 3675);
-    			attr_dev(p3, "id", "arrowbody");
-    			attr_dev(p3, "class", "svelte-1oaigx8");
-    			add_location(p3, file$3, 118, 0, 3704);
-    			attr_dev(p4, "id", "accuracy");
-    			attr_dev(p4, "class", "svelte-1oaigx8");
-    			add_location(p4, file$3, 120, 0, 3728);
+    			attr_dev(p3, "id", "accuracy");
+    			attr_dev(p3, "class", "svelte-kqmr1e");
+    			add_location(p3, file$3, 119, 0, 3699);
     			attr_dev(canvas_1, "width", "400");
     			attr_dev(canvas_1, "height", "400");
     			attr_dev(canvas_1, "id", "canvasW");
-    			attr_dev(canvas_1, "class", "svelte-1oaigx8");
-    			add_location(canvas_1, file$3, 121, 0, 3763);
+    			attr_dev(canvas_1, "class", "svelte-kqmr1e");
+    			add_location(canvas_1, file$3, 120, 0, 3734);
     			attr_dev(button0, "id", "ButtonClear");
-    			attr_dev(button0, "class", "svelte-1oaigx8");
-    			add_location(button0, file$3, 124, 2, 3845);
+    			attr_dev(button0, "class", "svelte-kqmr1e");
+    			add_location(button0, file$3, 123, 2, 3816);
     			attr_dev(button1, "id", "ButtonPredict");
-    			attr_dev(button1, "class", "svelte-1oaigx8");
-    			add_location(button1, file$3, 125, 2, 3908);
-    			attr_dev(button2, "id", "ButtonGraph");
-    			attr_dev(button2, "class", "svelte-1oaigx8");
-    			add_location(button2, file$3, 127, 2, 3983);
-    			add_location(div0, file$3, 126, 0, 3975);
-    			add_location(div1, file$3, 123, 0, 3836);
-    			add_location(div2, file$3, 122, 0, 3830);
+    			attr_dev(button1, "class", "svelte-kqmr1e");
+    			add_location(button1, file$3, 124, 2, 3879);
+    			add_location(div0, file$3, 125, 0, 3946);
+    			add_location(div1, file$3, 122, 0, 3807);
+    			add_location(div2, file$3, 121, 0, 3801);
     			attr_dev(div3, "id", "tabbar");
-    			attr_dev(div3, "class", "svelte-1oaigx8");
+    			attr_dev(div3, "class", "svelte-kqmr1e");
     			add_location(div3, file$3, 113, 0, 3508);
     			attr_dev(main, "id", "pagePrediction");
-    			attr_dev(main, "class", "svelte-1oaigx8");
+    			attr_dev(main, "class", "svelte-kqmr1e");
     			add_location(main, file$3, 112, 0, 3481);
     		},
     		l: function claim(nodes) {
@@ -585,24 +571,21 @@ var app = (function () {
     			append_dev(div3, p1);
     			append_dev(div3, t5);
     			append_dev(div3, p2);
-    			append_dev(div3, t7);
+    			append_dev(div3, t6);
     			append_dev(div3, p3);
     			append_dev(div3, t8);
-    			append_dev(div3, p4);
-    			append_dev(div3, t10);
     			append_dev(div3, canvas_1);
     			/*canvas_1_binding*/ ctx[3](canvas_1);
-    			append_dev(div3, t11);
+    			append_dev(div3, t9);
     			append_dev(div3, div2);
     			append_dev(div2, div1);
     			append_dev(div1, button0);
     			/*button0_binding*/ ctx[4](button0);
-    			append_dev(div1, t13);
+    			append_dev(div1, t11);
     			append_dev(div1, button1);
     			/*button1_binding*/ ctx[5](button1);
-    			append_dev(div1, t15);
+    			append_dev(div1, t13);
     			append_dev(div1, div0);
-    			append_dev(div0, button2);
     		},
     		p: noop,
     		i: noop,
@@ -897,15 +880,15 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(th, "scope", "row");
-    			attr_dev(th, "class", "svelte-hs0cyz");
-    			add_location(th, file$2, 15, 10, 449);
-    			attr_dev(span, "class", "svelte-hs0cyz");
-    			add_location(span, file$2, 17, 12, 506);
-    			attr_dev(td, "class", "svelte-hs0cyz");
-    			add_location(td, file$2, 16, 10, 489);
+    			attr_dev(th, "class", "svelte-1xjrev4");
+    			add_location(th, file$2, 15, 10, 460);
+    			attr_dev(span, "class", "svelte-1xjrev4");
+    			add_location(span, file$2, 17, 12, 517);
+    			attr_dev(td, "class", "svelte-1xjrev4");
+    			add_location(td, file$2, 16, 10, 500);
     			set_style(tr, "height", /*percentage*/ ctx[2] + "%");
-    			attr_dev(tr, "class", "svelte-hs0cyz");
-    			add_location(tr, file$2, 14, 8, 405);
+    			attr_dev(tr, "class", "svelte-1xjrev4");
+    			add_location(tr, file$2, 14, 8, 416);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -953,6 +936,9 @@ var app = (function () {
     	let th1;
     	let t5;
     	let tbody;
+    	let t6;
+    	let button;
+    	let a;
     	let each_value = Object.entries(/*$predictionPercentage*/ ctx[0]);
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -982,22 +968,32 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(caption, "class", "svelte-hs0cyz");
-    			add_location(caption, file$2, 5, 4, 123);
+    			t6 = space();
+    			button = element("button");
+    			a = element("a");
+    			a.textContent = "Back";
+    			attr_dev(caption, "class", "svelte-1xjrev4");
+    			add_location(caption, file$2, 5, 4, 134);
     			attr_dev(th0, "scope", "col");
-    			attr_dev(th0, "class", "svelte-hs0cyz");
-    			add_location(th0, file$2, 8, 8, 202);
+    			attr_dev(th0, "class", "svelte-1xjrev4");
+    			add_location(th0, file$2, 8, 8, 213);
     			attr_dev(th1, "scope", "col");
-    			attr_dev(th1, "class", "svelte-hs0cyz");
-    			add_location(th1, file$2, 9, 8, 236);
-    			attr_dev(tr, "class", "svelte-hs0cyz");
-    			add_location(tr, file$2, 7, 6, 189);
-    			attr_dev(thead, "class", "svelte-hs0cyz");
-    			add_location(thead, file$2, 6, 4, 175);
-    			attr_dev(tbody, "class", "horizontal svelte-hs0cyz");
-    			add_location(tbody, file$2, 12, 4, 294);
-    			attr_dev(table, "class", "graph svelte-hs0cyz");
+    			attr_dev(th1, "class", "svelte-1xjrev4");
+    			add_location(th1, file$2, 9, 8, 247);
+    			attr_dev(tr, "class", "svelte-1xjrev4");
+    			add_location(tr, file$2, 7, 6, 200);
+    			attr_dev(thead, "class", "svelte-1xjrev4");
+    			add_location(thead, file$2, 6, 4, 186);
+    			attr_dev(tbody, "class", "horizontal svelte-1xjrev4");
+    			add_location(tbody, file$2, 12, 4, 305);
+    			attr_dev(table, "class", "graph svelte-1xjrev4");
+    			attr_dev(table, "id", "pageG");
     			add_location(table, file$2, 4, 2, 97);
+    			attr_dev(a, "href", "http://localhost:5000/");
+    			add_location(a, file$2, 23, 26, 637);
+    			attr_dev(button, "id", "backButton");
+    			attr_dev(button, "class", "svelte-1xjrev4");
+    			add_location(button, file$2, 23, 2, 613);
     			add_location(main, file$2, 3, 0, 88);
     		},
     		l: function claim(nodes) {
@@ -1019,6 +1015,10 @@ var app = (function () {
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
+
+    			append_dev(main, t6);
+    			append_dev(main, button);
+    			append_dev(button, a);
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*Object, $predictionPercentage*/ 1) {
@@ -1120,8 +1120,12 @@ var app = (function () {
     			t1 = space();
     			button = element("button");
     			button.textContent = "graph";
+    			attr_dev(h1, "id", "predictProduct");
+    			attr_dev(h1, "class", "svelte-hpkn7w");
     			add_location(h1, file$1, 9, 2, 352);
-    			add_location(button, file$1, 10, 2, 381);
+    			attr_dev(button, "id", "ButtonGraph");
+    			attr_dev(button, "class", "svelte-hpkn7w");
+    			add_location(button, file$1, 10, 2, 401);
     			add_location(main, file$1, 8, 0, 343);
     		},
     		l: function claim(nodes) {
@@ -1227,7 +1231,7 @@ var app = (function () {
     /* src\App.svelte generated by Svelte v3.43.1 */
     const file = "src\\App.svelte";
 
-    // (13:1) {#if $togglePredicted}
+    // (14:1) {#if $togglePredicted}
     function create_if_block_1(ctx) {
     	let predicteddigit;
     	let current;
@@ -1259,14 +1263,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(13:1) {#if $togglePredicted}",
+    		source: "(14:1) {#if $togglePredicted}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (16:1) {#if $toggleGraph}
+    // (17:1) {#if $toggleGraph}
     function create_if_block(ctx) {
     	let percentagegraph;
     	let current;
@@ -1298,7 +1302,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(16:1) {#if $toggleGraph}",
+    		source: "(17:1) {#if $toggleGraph}",
     		ctx
     	});
 
@@ -1333,6 +1337,8 @@ var app = (function () {
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css");
     			add_location(link, file, 7, 3, 257);
     			add_location(head, file, 6, 0, 247);
+    			attr_dev(main, "id", "homepage");
+    			attr_dev(main, "class", "svelte-1ebg89q");
     			add_location(main, file, 10, 0, 369);
     		},
     		l: function claim(nodes) {

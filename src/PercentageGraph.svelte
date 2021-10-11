@@ -3,7 +3,7 @@
 </script>
 
 <main>
-  <table class="graph">
+  <table class="graph" id="pageG">
     <caption>Digit Probability Percentage</caption>
     <thead>
       <tr>
@@ -22,9 +22,24 @@
       {/each}
     </tbody>
   </table>
+  <button id="backButton"><a href="http://localhost:5000/">Back</a></button>
 </main>
 
 <style>
+  #pageG{
+  position: relative;
+  width: 1440px;
+  height: 900px;
+  background: #606060;
+  }
+  #backButton{
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 1250px;
+  top: 36px;
+  background: #B1C319;
+  }
   .graph {
     margin-bottom: 1em;
     font: normal 100%/150% arial, helvetica, sans-serif;
@@ -56,6 +71,7 @@
       }
 
       .graph tbody {
+        
         position: relative;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));

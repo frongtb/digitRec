@@ -156,7 +156,6 @@
 <h1 id="handWrite">Handwritten Digit Recognition Web App</h1>
 <p id="writenum">Write your number!</p>
 <p id="predictionResult">Prediction Result</p>
-<p id="predictProduct">X</p>
 <p id="arrowbody"></p>
 
 <p id="accuracy">Accuracy: xx%</p>
@@ -166,14 +165,13 @@
   <button bind:this={clearBtn} id="ButtonClear">clear</button>
   <button bind:this={predictBtn} id="ButtonPredict">predict</button>
 <div>
-  <button id="ButtonGraph">Graph</button>
 </main>
 
 <style>
 #pagePrediction{
+background-size: 100% 100%;
 position: relative;
-width: 1440px;
-height: 1024px;
+
 background: #606060;
 mix-blend-mode: normal;
 }
@@ -205,6 +203,7 @@ color: #FFFFFF;
   height: 80px;
   left: 120px;
   top: 816px;
+  background: #B1C319;
   }
 #ButtonClear{
 position: absolute;
@@ -212,14 +211,9 @@ width: 200px;
 height: 80px;
 left: 340px;
 top: 816px;
+background: #B1C319;
 }
-#ButtonGraph{
-position: absolute;
-width: 200px;
-height: 80px;
-left: 1010px;
-top: 720px;
-}
+
 #canvasW{
 position: absolute;
 width: 460px;
@@ -243,20 +237,7 @@ line-height: 95px;
 text-align: center;
 color: #FFFFFF;
 }
-#predictProduct{
-position: absolute;
-width: 101px;
-height: 180px;
-left: 1059px;
-top: 454px;
-font-family: FC Daisy;
-font-style: normal;
-font-weight: normal;
-font-size: 100px;
-line-height: 171px;
-text-align: center;
-color: #FFFFFF;
-}
+
 #predictionResult{
 position:absolute;
 width: 380px;
