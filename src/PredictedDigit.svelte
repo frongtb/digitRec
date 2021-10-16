@@ -11,31 +11,33 @@
 </script>
 
 <main>
-  <h1 id="predictProduct">{predictedAnswer}</h1>
+  <div id="box">
+  <h1 id="predictProduct">{predictedAnswer}</h1></div>
   <button on:click={onGraphBtnClick} id="ButtonGraph">graph</button>
 </main>
 
 <style>
+  #box{
+    position:relative;
+  }
 #ButtonGraph{
-position: absolute;
-width: 200px;
-height: 80px;
-left: 1010px;
-top: 720px;
+position: fixed;
+width: 9%;
+height: 8%;
+left: 65%;
+top: 83%;
 background: #B1C319;
 }
 #predictProduct{
-position: absolute;
-width: 101px;
-height: 180px;
-left: 1059px;
-top: 454px;
-font-family: FC Daisy;
-font-style: normal;
-font-weight: normal;
-font-size: 100px;
-line-height: 171px;
-text-align: center;
-color: #FFFFFF;
+ position: fixed;
+ left: 68%;
+ top: 50%;
+ font-family: FC Daisy;
+ font-style: normal;
+ font-weight: normal;
+ font-size: 400%;
+ line-height: 171px;
+ text-align: center;
+ color: #FFFFFF;
 }
 </style>

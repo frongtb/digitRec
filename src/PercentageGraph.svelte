@@ -4,7 +4,7 @@
 
 <main>
   <table class="graph" id="pageG">
-    <caption>Digit Probability Percentage</caption>
+    <caption id="colorfont">Digit Probability Percentage</caption>
     <thead>
       <tr>
         <th scope="col">Item</th>
@@ -22,10 +22,24 @@
       {/each}
     </tbody>
   </table>
-  <button id="backButton"><a href="http://localhost:5000/">Back</a></button>
+  <button id="backButton"><a href="http://localhost:5000/"><p id="font">Back</p></a></button>
 </main>
 
 <style>
+  #colorfont{
+    color: #FFFDFD;
+  }
+#font{
+position: absolute;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+text-align: center;
+line-height: 10px;
+font-size: 20px;
+color: #FFFDFD;
+  }
+  
   #pageG{
   position: relative;
   width: 1440px;
@@ -33,6 +47,8 @@
   background: #606060;
   }
   #backButton{
+  text-decoration: none;
+display: inline-block;
   position: absolute;
   width: 150px;
   height: 50px;

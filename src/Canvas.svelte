@@ -151,89 +151,89 @@
   })
 </script>
 
-<main id="pagePrediction">
+<main >
+<body id="pagePrediction">
 <div id="tabbar">
+  <div >
 <h1 id="handWrite">Handwritten Digit Recognition Web App</h1>
-<p id="writenum">Write your number!</p>
+<h1><p id="writenum">Write your number!</p></h1>
 <p id="predictionResult">Prediction Result</p>
 <p id="arrowbody"></p>
 
-<p id="accuracy">Accuracy: xx%</p>
+<p id="accuracy">Accuracy:%</p>
 <canvas bind:this={canvas} width="400" height="400" id="canvasW"/>
-<div>
+</div>
 <div> 
   <button bind:this={clearBtn} id="ButtonClear">clear</button>
   <button bind:this={predictBtn} id="ButtonPredict">predict</button>
-<div>
+</div>
+</div>
+</body>
 </main>
 
 <style>
-#pagePrediction{
-background-size: 100% 100%;
-position: relative;
 
+#pagePrediction{
+position:fixed;
+left: 0;
+top: 0;
+right: 0;
 background: #606060;
-mix-blend-mode: normal;
+
 }
 #tabbar{
 position: absolute;
-width: 1440px;
-height: 140px;
-left: 0px;
-top: 0px;
+width: 100%;
+height: 15%;
+left: 0;
+top: 0;
+left: 0;
 background: #B1C319;
 }
 #handWrite{
 position: absolute;
-width: 1360px;
-height: 100px;
-left: 36px;
-top: 32px;
+
+left: 20%;
+top: 25%;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
-font-size: 64px;
 line-height: 75px;
 text-align: center;
 color: #FFFFFF;
 }
 #ButtonPredict
 {position: absolute;
-  width: 200px;
-  height: 80px;
-  left: 120px;
-  top: 816px;
+  width: 9%;
+  height: 50%;
+  left: 10%;
+  top:590%;
   background: #B1C319;
   }
 #ButtonClear{
 position: absolute;
-width: 200px;
-height: 80px;
-left: 340px;
-top: 816px;
+width: 9%;
+height: 50%;
+left: 25%;
+top:590%;
 background: #B1C319;
 }
-
 #canvasW{
 position: absolute;
-width: 460px;
-height: 460px;
-left:100px;
-top: 316px;
+width: 35%;
+height: 400%;
+left:5%;
+top: 170%;
 }
 #writenum{
 position: absolute;
-width: 500px;
-height: 106px;
-left: 80px;
-top: 200px;
+left:8%;
+top: 110%;
 
 font-family: FC Daisy;
 font-style: normal;
 font-weight: normal;
-font-size: 50px;
-
-line-height: 95px;
+line-height: 95%;
 text-align: center;
 color: #FFFFFF;
 }
@@ -242,8 +242,8 @@ color: #FFFFFF;
 position:absolute;
 width: 380px;
 height: 60px;
-left: 909px;
-top: 384px;
+left: 60%;
+top: 200%;
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
@@ -254,10 +254,9 @@ color: #FFFFFF;
 }
 #accuracy{
 position: absolute;
-width: 380px;
-height: 60px;
-left: 920px;
-top: 650px;
+left: 65%;
+top: 500%;
+font-display:inherit;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -270,8 +269,8 @@ color: #FFFFFF;
 position: absolute;
 width: 180px;
 height: 0px;
-left: 640px;
-top: 560px;
+left: 45%;
+top: 400%;
 border: 5px solid #FFFFFF;
 box-sizing: border-box;
 }
