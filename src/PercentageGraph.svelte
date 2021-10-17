@@ -28,13 +28,14 @@
 <style>
   #colorfont{
     color: #FFFDFD;
-    position: relative;
-    top: 80px;
+    position: fixed;
+    top: 30px;
+    left:20px ;
     text-align: center;
     z-index: 10;
   }
 #font{
-position: absolute;
+position: fixed;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -42,12 +43,14 @@ text-align: center;
 line-height: 10px;
 font-size: 20px;
 color: #FFFDFD;
+left: 1300px;
+top: 60px;
   }
   
   #pageG{
-  position: absolute;
-  width: 1500px;
-  height: 1024px;
+  position: fixed;
+  width: 1400px;
+  height: 670px;
   top: 20px;
   background: #606060;
   box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
@@ -55,12 +58,13 @@ color: #FFFDFD;
   #backButton{
   text-decoration: none;
   display: inline-block;
-  position: absolute;
+  position: fixed;
   width: 120px;
   height: 30px;
-  left: 1400px;
-  top: 80px;
+  left: 1260px;
+  top: 50px;
   background: #B1C319;
+  border-radius: 20px 20px 20px 20px;
   }
   .graph {
     margin-bottom: 1em;
@@ -100,7 +104,7 @@ color: #FFFDFD;
         column-gap: 2.5%;
         align-items: end;
         height: 100%;
-        margin: 3em 0 1em 2.8em;
+        /* margin: 3em 0 1em 2.8em; */
         padding: 0 1em;
         border-bottom: 2px solid rgba(0, 0, 0, 0.5);
         background: repeating-linear-gradient(
@@ -165,7 +169,7 @@ color: #FFFDFD;
       .graph td {
         width: 100%;
         height: 100%;
-        background: #f63;
+        background: #B1C319;
         border-radius: 0.5em 0.5em 0 0;
         transition: background 0.5s;
       }

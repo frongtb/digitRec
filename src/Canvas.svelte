@@ -2,6 +2,8 @@
   import { onMount } from 'svelte'
   import { predictionPercentage, toggleGraph, togglePredicted } from './store/stores.ts'
 
+  $: predictedAnswer = Object.keys($predictionPercentage).reduce((a, b) => $predictionPercentage[a] > $predictionPercentage[b] ? a : b, {});
+
   let canvas
   let clearBtn
   let predictBtn
@@ -150,7 +152,7 @@
     }
   })
 </script>
-
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
 <main >
 <body id="pagePrediction">
 <div id="tabbar">
@@ -160,13 +162,13 @@
 <p id="predictionResult">Prediction Result</p>
 <p id="arrowbody"></p>
 <p id="triangle"></p>
-<p id="accuracy">Accuracy:%</p>
+<p id="accuracy">{$predictionPercentage[predictedAnswer] ? `Accuracy: ${$predictionPercentage[predictedAnswer]}%`: ''}</p>
 
 <canvas bind:this={canvas} width="500" height="400" id="canvasW"/>
 </div>
 <div > 
-  <button bind:this={clearBtn} id="ButtonClear">clear</button>
-  <button bind:this={predictBtn} id="ButtonPredict">predict</button>
+  <button bind:this={clearBtn} id="ButtonClear">Clear</button>
+  <button bind:this={predictBtn} id="ButtonPredict">Predict</button>
 </div>
 </div>
 </body>
@@ -199,6 +201,8 @@ font-weight: normal;
 line-height: 75px;
 text-align: center;
 color: #FFFFFF;
+
+
 }
 #ButtonPredict
 {position: absolute;
@@ -207,6 +211,10 @@ color: #FFFFFF;
   left: 12%;
   top: 750%;
   background: #B1C319;
+  border-radius: 20px 20px 20px 20px;
+  color: #FFFDFD;
+  font-size: 25px;
+  
   }
 #ButtonClear{
 position: absolute;
@@ -215,6 +223,9 @@ height: 80px;
 left: 28%;
 top:750%;
 background: #B1C319;
+border-radius: 20px 20px 20px 20px;
+color: #FFFDFD;
+font-size: 25px;
 }
 #canvasW{
 position: absolute;
@@ -225,12 +236,13 @@ top: 200%;
 position: absolute;
 left:16%;
 top: 130%;
-font-family: FC Daisy;
+font-family: 'Indie Flower', cursive;
 font-style: normal;
 font-weight: normal;
 line-height: 95%;
 text-align: center;
 color: #FFFFFF;
+font-weight: bold;
 }
 
 #predictionResult{
@@ -249,7 +261,7 @@ color: #FFFFFF;
 }
 #accuracy{
 position: absolute;
-left: 65%;
+left: 63%;
 top: 600%;
 font-display:inherit;
 font-family: Roboto;
