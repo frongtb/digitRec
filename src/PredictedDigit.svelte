@@ -22,16 +22,16 @@
   }
 #ButtonGraph{
 position: fixed;
-width: 9%;
-height: 8%;
+width: 200px;
+height: 80px;
 left: 65%;
-top: 83%;
+top: 75%;
 background: #B1C319;
 }
 #predictProduct{
  position: fixed;
- left: 68%;
- top: 50%;
+ left: 70%;
+ top: 40%;
  font-family: FC Daisy;
  font-style: normal;
  font-weight: normal;

@@ -154,16 +154,17 @@
 <main >
 <body id="pagePrediction">
 <div id="tabbar">
-  <div >
+<div>
 <h1 id="handWrite">Handwritten Digit Recognition Web App</h1>
 <h1><p id="writenum">Write your number!</p></h1>
 <p id="predictionResult">Prediction Result</p>
 <p id="arrowbody"></p>
-
+<p id="triangle"></p>
 <p id="accuracy">Accuracy:%</p>
-<canvas bind:this={canvas} width="400" height="400" id="canvasW"/>
+
+<canvas bind:this={canvas} width="500" height="400" id="canvasW"/>
 </div>
-<div> 
+<div > 
   <button bind:this={clearBtn} id="ButtonClear">clear</button>
   <button bind:this={predictBtn} id="ButtonPredict">predict</button>
 </div>
@@ -179,22 +180,19 @@ left: 0;
 top: 0;
 right: 0;
 background: #606060;
-
 }
 #tabbar{
 position: absolute;
 width: 100%;
-height: 15%;
+height: 80px;
 left: 0;
 top: 0;
 left: 0;
 background: #B1C319;
 }
 #handWrite{
-position: absolute;
-
-left: 20%;
-top: 25%;
+text-align: center;
+position: relative;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -204,32 +202,29 @@ color: #FFFFFF;
 }
 #ButtonPredict
 {position: absolute;
-  width: 9%;
-  height: 50%;
-  left: 10%;
-  top:590%;
+  width: 200px;
+  height: 80px;
+  left: 12%;
+  top: 750%;
   background: #B1C319;
   }
 #ButtonClear{
 position: absolute;
-width: 9%;
-height: 50%;
-left: 25%;
-top:590%;
+width: 200px;
+height: 80px;
+left: 28%;
+top:750%;
 background: #B1C319;
 }
 #canvasW{
 position: absolute;
-width: 35%;
-height: 400%;
-left:5%;
-top: 170%;
+left:10%;
+top: 200%;
 }
 #writenum{
 position: absolute;
-left:8%;
-top: 110%;
-
+left:16%;
+top: 130%;
 font-family: FC Daisy;
 font-style: normal;
 font-weight: normal;
@@ -243,7 +238,7 @@ position:absolute;
 width: 380px;
 height: 60px;
 left: 60%;
-top: 200%;
+top: 250%;
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
@@ -255,7 +250,7 @@ color: #FFFFFF;
 #accuracy{
 position: absolute;
 left: 65%;
-top: 500%;
+top: 600%;
 font-display:inherit;
 font-family: Roboto;
 font-style: normal;
@@ -270,11 +265,21 @@ position: absolute;
 width: 180px;
 height: 0px;
 left: 45%;
-top: 400%;
+top: 450%;
 border: 5px solid #FFFFFF;
 box-sizing: border-box;
 }
+#triangle {
+  position: absolute;
+  border-right: 10px solid #FFFFFF; 
+  border-bottom: 10px solid #FFFFFF;
+  height: 30px;
+  width: 30px;
+  transform: rotate(-45deg);
+  left: 55%;
+  top: 438%;
 
+}
 </style>
 
 

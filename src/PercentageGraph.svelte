@@ -3,7 +3,7 @@
 </script>
 
 <main>
-  <table class="graph" id="pageG">
+  <table class="graph" >
     <caption id="colorfont">Digit Probability Percentage</caption>
     <thead>
       <tr>
@@ -11,7 +11,7 @@
         <th scope="col">Percent</th>
       </tr>
     </thead>
-    <tbody class="horizontal">
+    <tbody class="horizontal" id="pageG">
       {#each Object.entries($predictionPercentage) as [number, percentage]}
         <tr style="height:{percentage}%">
           <th scope="row">{number}</th>
@@ -22,12 +22,16 @@
       {/each}
     </tbody>
   </table>
-  <button id="backButton"><a href="http://localhost:5000/"><p id="font">Back</p></a></button>
+  <button id="backButton"><a href="http://localhost:5000/"><h1 id="font">Back</h1></a></button>
 </main>
 
 <style>
   #colorfont{
     color: #FFFDFD;
+    position: relative;
+    top: 80px;
+    text-align: center;
+    z-index: 10;
   }
 #font{
 position: absolute;
@@ -41,19 +45,21 @@ color: #FFFDFD;
   }
   
   #pageG{
-  position: relative;
-  width: 1440px;
-  height: 900px;
+  position: absolute;
+  width: 1500px;
+  height: 1024px;
+  top: 20px;
   background: #606060;
+  box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
   }
   #backButton{
   text-decoration: none;
-display: inline-block;
+  display: inline-block;
   position: absolute;
-  width: 150px;
-  height: 50px;
-  left: 1250px;
-  top: 36px;
+  width: 120px;
+  height: 30px;
+  left: 1400px;
+  top: 80px;
   background: #B1C319;
   }
   .graph {
